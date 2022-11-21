@@ -10,10 +10,10 @@ public class DataStorageExercise {
         System.out.println("\nMy file is located at " + myFile.getAbsolutePath());
 
         try{
-
-            FileWriter outputFile = new FileWriter(myFile, true);
-            outputFile.write("Adding another line to the file");
-            outputFile.close();
+            FileWriter myWriter = new FileWriter(myFile, true);
+            PrintWriter myPrinter = new PrintWriter(myWriter);
+            myPrinter.println("Adding a final line to the file");
+            myPrinter.close();
         }
         catch(IOException ex){
             ex.printStackTrace();
