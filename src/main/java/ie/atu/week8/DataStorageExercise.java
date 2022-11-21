@@ -8,17 +8,15 @@ public class DataStorageExercise {
 
         File myFile = new File("MyFile.txt");
         System.out.println("\nMy file is located at " + myFile.getAbsolutePath());
+
         try{
 
-            FileWriter outputFile = new FileWriter(myFile);
-            outputFile.write("Second writing to the file test");
+            FileWriter outputFile = new FileWriter(myFile, true);
+            outputFile.write("Adding another line to the file");
             outputFile.close();
         }
         catch(IOException ex){
             ex.printStackTrace();
         }
-
-
-
     }
 }
